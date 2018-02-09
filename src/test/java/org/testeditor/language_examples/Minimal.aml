@@ -1,0 +1,13 @@
+package org.testeditor.language_examples
+
+interaction type minimalCallWithoutParmeter {
+	template = "minimalcallwithoutparameter"
+	method = MinimalFixture.callWithoutParameter()
+}
+
+component type MinimalComponentType {
+	interactions = minimalCallWithoutParmeter
+}
+
+component MinimalComponent is MinimalComponentType {
+}

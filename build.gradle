@@ -1,0 +1,39 @@
+plugins {
+    id 'org.testeditor.gradle-plugin' version '0.8'
+    id 'maven'
+    id 'eclipse'
+}
+
+group = 'org.testeditor.language-examples'
+version = '1.0.0-SNAPSHOT'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    mavenLocal()
+    jcenter()
+    maven { url "http://dl.bintray.com/test-editor/Fixtures" }
+    maven { url "http://dl.bintray.com/test-editor/maven/" }
+}
+
+// Configure the testeditor plugin
+testeditor {
+	version '1.10.0'
+}
+
+// configure logging within tests (see https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.logging.TestLogging.html)
+// show standard out during test to see logging output
+test.testLogging.showStandardStreams = true
+// make sure that assertion failures are reported more verbose!
+test.testLogging.exceptionFormat = 'full'
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+	compile 'org.testeditor.fixture:core-fixture:3.2.1'
+	compile 'org.testeditor.fixture:web-fixture:3.2.2'
+	testCompile 'junit:junit:4.12'
+}
+
+// add environmental variables needed by the test (for any 'require <var-name>' in tcl)
+// test.doFirst {
+//	environment 'requiredVariable', 'value'
+// }
