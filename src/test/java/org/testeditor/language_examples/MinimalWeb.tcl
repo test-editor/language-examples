@@ -9,6 +9,11 @@ import org.testeditor.fixture.web.*
 	- Start <Firefox>
 	- Browse "https://www.google.com"
 
+* Search for "testeditor"
+	Component: Searchsite
+	- Enter "testeditor" into <Searchfield>
+	- Press enter on <Searchfield>
+
 * Close browser
 	Component: WebBrowser
 	- Wait "5" seconds

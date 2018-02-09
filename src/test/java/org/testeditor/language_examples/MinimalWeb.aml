@@ -1,0 +1,24 @@
+package org.testeditor.language_examples
+
+import org.testeditor.fixture.web.WebDriverFixture
+import org.testeditor.fixture.web.Page
+import org.testeditor.fixture.web.field
+
+import static org.testeditor.fixture.web.LocatorStrategy.NAME
+
+/**
+ * Application model for the google search site. It contains only the search field and
+ * binds it to the test-editor web fixture field element.
+ */
+component Searchsite is Page {
+	element Searchfield is field {
+		label = "Search field"
+		locator = "q"
+		locatorStrategy = NAME
+	}
+}
+
+interaction type makeScreenshot {
+	template = "make screenshot to" ${filepath}
+	method = WebDriverFixture.screenshot(filepath)
+}
