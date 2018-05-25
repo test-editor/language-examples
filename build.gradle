@@ -9,7 +9,6 @@ version = '1.0.0-SNAPSHOT'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
-    mavenLocal()
     jcenter()
     maven { url "http://dl.bintray.com/test-editor/Fixtures" }
     maven { url "http://dl.bintray.com/test-editor/maven/" }
@@ -17,7 +16,8 @@ repositories {
 
 // Configure the testeditor plugin
 testeditor {
-	version '1.10.0'
+	version '1.15.0'
+	xtextVersion '2.13.0'
 }
 
 // configure logging within tests (see https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.logging.TestLogging.html)
@@ -28,8 +28,8 @@ test.testLogging.exceptionFormat = 'full'
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-	compile 'org.testeditor.fixture:core-fixture:3.2.1'
-	compile 'org.testeditor.fixture:web-fixture:3.2.2'
+	compile 'org.testeditor.fixture:core-fixture:4.0.1'
+	compile 'org.testeditor.fixture:web-fixture:4.0.0'
 	testCompile 'junit:junit:4.12'
 }
 

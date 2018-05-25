@@ -1,5 +1,7 @@
 package org.testeditor.language_examples;
 
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testeditor.fixture.core.TestRunListener;
@@ -7,6 +9,7 @@ import org.testeditor.fixture.core.TestRunReportable;
 import org.testeditor.fixture.core.TestRunReporter;
 import org.testeditor.fixture.core.TestRunReporter.Action;
 import org.testeditor.fixture.core.TestRunReporter.SemanticUnit;
+import org.testeditor.fixture.core.TestRunReporter.Status;
 import org.testeditor.fixture.core.interaction.FixtureMethod;
 
 public class MinimalFixture implements TestRunListener, TestRunReportable {
@@ -20,7 +23,7 @@ public class MinimalFixture implements TestRunListener, TestRunReportable {
 	}
 
 	@Override
-	public void reported(SemanticUnit unit, Action action, String msg) {
+	public void reported(SemanticUnit unit, Action action, String msg, String id, Status status, Map<String, String> variables) {
 		// logger.info("reported called");
 	}
 
