@@ -11,7 +11,7 @@ interaction type getBoolean {
 }
 
 component type MinimalComponentType {
-	interactions = minimalCallWithoutParmeter
+	interactions = minimalCallWithoutParmeter, getBoolean
 }
 
 component MinimalComponent is MinimalComponentType {
