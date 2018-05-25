@@ -31,5 +31,11 @@ public class MinimalFixture implements TestRunListener, TestRunReportable {
     public void callWithoutParameter() {
 		logger.info("callWithoutParameter");
     }
+    
+    @FixtureMethod
+    public boolean getBoolean() {
+        logger.info("getBoolean");
+        return true;
+    }
 
 }
