@@ -5,6 +5,11 @@ interaction type minimalCallWithoutParmeter {
 	method = MinimalFixture.callWithoutParameter()
 }
 
+interaction type getBoolean {
+    template = "getBoolean"
+    method = MinimalFixture.getBoolean()
+}
+
 component type MinimalComponentType {
 	interactions = minimalCallWithoutParmeter
 }
