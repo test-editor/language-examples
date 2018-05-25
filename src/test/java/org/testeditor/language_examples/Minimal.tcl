@@ -8,3 +8,5 @@ import org.testeditor.language_examples.MinimalComponent
 * minimal test step
 Component: MinimalComponent
 - minimalcallwithoutparameter
+- value = getBoolean
+- assert value
