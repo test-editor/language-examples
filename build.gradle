@@ -16,7 +16,7 @@ repositories {
 
 // Configure the testeditor plugin
 testeditor {
-	version '1.15.0'
+	version '1.17.1'
 	xtextVersion '2.13.0'
 }
 
