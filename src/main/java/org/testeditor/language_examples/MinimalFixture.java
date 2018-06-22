@@ -10,30 +10,46 @@ import org.testeditor.fixture.core.TestRunReporter;
 import org.testeditor.fixture.core.TestRunReporter.Action;
 import org.testeditor.fixture.core.TestRunReporter.SemanticUnit;
 import org.testeditor.fixture.core.TestRunReporter.Status;
+import org.testeditor.fixture.core.FixtureException;
 import org.testeditor.fixture.core.interaction.FixtureMethod;
 
 public class MinimalFixture implements TestRunListener, TestRunReportable {
 
-	private static Logger logger=LoggerFactory.getLogger(MinimalFixture.class);
+    private static Logger logger=LoggerFactory.getLogger(MinimalFixture.class);
 
-	@Override
-	public void initWithReporter(TestRunReporter reporter) {
-		reporter.addListener(this);
-		logger.info("added fixture as listener to reporter");
-	}
+    @Override
+    public void initWithReporter(TestRunReporter reporter) {
+        reporter.addListener(this);
+        logger.info("added fixture as listener to reporter");
+    }
 
-	@Override
-	public void reported(SemanticUnit unit, Action action, String msg, String id, Status status, Map<String, String> variables) {
-		// logger.info("reported called");
-	}
+    @Override
+    public void reported(SemanticUnit unit, Action action, String msg, String id, Status status, Map<String, String> variables) {
+        // logger.info("reported called");
+    }
 
-	@FixtureMethod
-    public void callWithoutParameter() {
-		logger.info("callWithoutParameter");
+    @Override
+    public void reportFixtureExit(FixtureException fixtureException) {
+        // empty for now
+    }
+
+    @Override
+    public void reportExceptionExit(Exception exception) {
+        // empty for now
+    }
+
+    @Override
+    public void reportAssertionExit(AssertionError assertionError) {
+        // empty for now
+    }
+
+    @FixtureMethod
+    public void callWithoutParameter() throws FixtureException {
+        logger.info("callWithoutParameter");
     }
     
     @FixtureMethod
-    public boolean getBoolean() {
+    public boolean getBoolean() throws FixtureException {
         logger.info("getBoolean");
         return true;
     }
