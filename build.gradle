@@ -28,8 +28,8 @@ test.testLogging.exceptionFormat = 'full'
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-	compile 'org.testeditor.fixture:core-fixture:4.0.1'
-	compile 'org.testeditor.fixture:web-fixture:4.0.0'
+	compile 'org.testeditor.fixture:core-fixture:4.1.5'
+	compile 'org.testeditor.fixture:web-fixture:4.1.1'
 	testCompile 'junit:junit:4.12'
 }
 
