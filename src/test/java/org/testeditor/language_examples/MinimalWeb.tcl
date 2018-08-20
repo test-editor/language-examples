@@ -12,7 +12,7 @@ import org.testeditor.fixture.web.*
 * Search for "testeditor"
 	Component: Searchsite
 	- Enter "testeditor" into <Searchfield>
-	- Press enter on <Searchfield>
+    - Submit element <Searchfield>
 
 * Close browser
 	Component: WebBrowser
