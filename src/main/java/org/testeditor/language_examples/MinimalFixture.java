@@ -11,6 +11,7 @@ import org.testeditor.fixture.core.TestRunReporter.Action;
 import org.testeditor.fixture.core.TestRunReporter.SemanticUnit;
 import org.testeditor.fixture.core.TestRunReporter.Status;
 import org.testeditor.fixture.core.interaction.FixtureMethod;
+import org.testeditor.fixture.core.FixtureException;
 
 public class MinimalFixture implements TestRunListener, TestRunReportable {
 
@@ -28,12 +29,12 @@ public class MinimalFixture implements TestRunListener, TestRunReportable {
 	}
 
 	@FixtureMethod
-    public void callWithoutParameter() {
+    public void callWithoutParameter() throws FixtureException {
 		logger.info("callWithoutParameter");
     }
     
     @FixtureMethod
-    public boolean getBoolean() {
+    public boolean getBoolean() throws FixtureException {
         logger.info("getBoolean");
         return true;
     }
