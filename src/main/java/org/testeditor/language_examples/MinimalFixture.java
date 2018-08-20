@@ -34,12 +34,12 @@ public class MinimalFixture implements TestRunListener, TestRunReportable {
 	}
 
 	@Override
-	public void reportExceptionExit(AssertionError e) {
+	public void reportExceptionExit(Exception e) {
 	    // ignore (for now)
 	}
 
 	@Override
-	public void reportFixtureExit(AssertionError e) {
+	public void reportFixtureExit(FixtureException e) {
 	    // ignore (for now)
 	}
 
