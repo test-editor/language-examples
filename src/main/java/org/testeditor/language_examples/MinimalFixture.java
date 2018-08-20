@@ -27,6 +27,22 @@ public class MinimalFixture implements TestRunListener, TestRunReportable {
 	public void reported(SemanticUnit unit, Action action, String msg, String id, Status status, Map<String, String> variables) {
 		// logger.info("reported called");
 	}
+	
+	@Override
+	public void reportAssertionExit(AssertionError e) {
+	    // ignore (for now)
+	}
+
+	@Override
+	public void reportExceptionExit(AssertionError e) {
+	    // ignore (for now)
+	}
+
+	@Override
+	public void reportFixtureExit(AssertionError e) {
+	    // ignore (for now)
+	}
+
 
 	@FixtureMethod
     public void callWithoutParameter() throws FixtureException {
