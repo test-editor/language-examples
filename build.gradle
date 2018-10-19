@@ -1,5 +1,5 @@
 plugins {
-    id 'org.testeditor.gradle-plugin' version '0.8'
+    id 'org.testeditor.gradle-plugin' version '0.11'
     id 'maven'
     id 'eclipse'
 }
@@ -16,9 +16,12 @@ repositories {
 
 // Configure the testeditor plugin
 testeditor {
-	version '1.17.1'
-	xtextVersion '2.13.0'
+	languageVersion '2.1.+'
+	xtextVersion '2.15.0'
 }
+
+sourceCompatibility = '1.10'
+targetCompatibility = '1.10'
 
 // configure logging within tests (see https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.logging.TestLogging.html)
 // show standard out during test to see logging output
