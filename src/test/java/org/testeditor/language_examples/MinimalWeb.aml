@@ -1,8 +1,6 @@
 package org.testeditor.language_examples
 
-import org.testeditor.fixture.web.WebDriverFixture
-import org.testeditor.fixture.web.Page
-import org.testeditor.fixture.web.field
+import org.testeditor.fixture.web.*
 
 import static org.testeditor.fixture.web.LocatorStrategy.NAME
 
