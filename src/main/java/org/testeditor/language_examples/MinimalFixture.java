@@ -16,7 +16,7 @@ public class MinimalFixture implements TestRunListener, TestRunReportable {
 	@Override
 	public void initWithReporter(TestRunReporter reporter) {
 		reporter.addListener(this);
-		logger.info("added fixture as listener to reporter");
+		logger.debug("added fixture as listener to reporter");
 	}
 
 	@Override
@@ -25,8 +25,8 @@ public class MinimalFixture implements TestRunListener, TestRunReportable {
 	}
 
 	@FixtureMethod
-    public void callWithoutParameter() {
-		logger.info("callWithoutParameter");
-    }
+	public void callWithoutParameter() {
+		logger.debug("callWithoutParameter");
+    	}
 
 }
