@@ -16,7 +16,7 @@ repositories {
 
 // Configure the testeditor plugin
 testeditor {
-	languageVersion '2.1.+'
+	languageVersion '2.2.+'
 	xtextVersion '2.15.0'
 }
 
@@ -31,8 +31,8 @@ test.testLogging.exceptionFormat = 'full'
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-	compile 'org.testeditor.fixture:core-fixture:4.2.+'
-	compile 'org.testeditor.fixture:web-fixture:4.1.+'
+	compile 'org.testeditor.fixture:core-fixture:4.3.+'
+	compile 'org.testeditor.fixture:web-fixture:4.2.+'
 	testCompile 'junit:junit:4.12'
 }
 
