@@ -1,0 +1,15 @@
+package org.testeditor.heroes
+
+import org.testeditor.fixture.web.angularjs.*
+
+import static org.testeditor.fixture.web.LocatorStrategy.XPATH
+
+component Dashboard is Page {
+  element HeroesButton is button locate by XPATH "/html/body/my-root/nav/a[2]"
+}
+
+component Heroes is Page {
+  element Add is button locate by XPATH "/html/body/my-root/my-heroes/button"
+  element Name is field locate by XPATH "/html/body/my-root/my-heroes/div[1]/my-hero-detail/div/div[2]/input"
+  element LastListItem is field locate by XPATH "/html/body/my-root/my-heroes/ul/li[10]/span"
+}
