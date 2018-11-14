@@ -9,7 +9,7 @@
 		<Logger name="org.testeditor" level="trace" additivity="false">
 			<AppenderRef ref="Console" />
 		</Logger>
-		<Root level="info">
+		<Root level="trace">
 			<AppenderRef ref="Console" />
 		</Root>
 	</Loggers>
