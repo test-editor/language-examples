@@ -5,23 +5,29 @@ package org.testeditor.heroes
 Setup:
   Component: org.testeditor.fixture.web.WebBrowser
   - Start <Firefox>
-  - Browse "http://localhost:4300"
+  - Browse "http://sut:4200/heroes"
+  Component: Heroes
+  - Wait "2" seconds
+  - actualName = Read <LastListItem>
+  - assert actualName = "20 Tornado"
   
-  Component: Dashboard
-  - Click <HeroesButton>
-  
+//--------------------------------------------------
 
 * Create hero "Sancho"
   Component: Heroes
+  - Wait "2" seconds until <Add> is found
   - Click <Add>
   - Enter "Sancho" into <Name>
-  - Submit element <Name>
+  - Wait "2" seconds until <Save> is found
+  - Click <Save>
 
 * Verify hero is in the list
   Component: Heroes
+  - Wait "2" seconds
   - actualName = Read <LastListItem>
-  - assert actualName = "Sancho"
+  - assert actualName = "21 Sancho"
 
+//--------------------------------------------------
 
 Cleanup:
   Component: org.testeditor.fixture.web.WebBrowser
