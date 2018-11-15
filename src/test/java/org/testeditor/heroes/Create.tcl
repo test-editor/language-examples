@@ -10,10 +10,12 @@ Setup:
   - Wait "2" seconds
   - actualName = Read <LastListItem>
   - assert actualName = "20 Tornado"
-  
+
 //--------------------------------------------------
 
-* Create hero "Sancho"
+* Given: I am on the heroes page
+
+* When: I create a hero named "Sancho"
   Component: Heroes
   - Wait "2" seconds until <Add> is found
   - Click <Add>
@@ -21,7 +23,7 @@ Setup:
   - Wait "2" seconds until <Save> is found
   - Click <Save>
 
-* Verify hero is in the list
+* Then: The hero should be the last one of the list
   Component: Heroes
   - Wait "2" seconds
   - actualName = Read <LastListItem>
