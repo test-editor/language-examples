@@ -1,6 +1,8 @@
 
 # Create
 
-* Create hero "Sancho"
+* Given: I am on the heroes page
 
-* Verify hero is in the list
+* When: I create a hero named "Sancho"
+
+* Then: The hero should be the last one of the list
