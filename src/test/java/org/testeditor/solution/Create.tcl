@@ -2,7 +2,8 @@ package org.testeditor.heroes
 
 # Create implements Create
 
-Setup:
+
+* Given: I am on the heroes page
   Component: org.testeditor.fixture.web.WebBrowser
   - Start <Firefox>
   - Browse "http://sut:4200/heroes"
@@ -10,10 +11,6 @@ Setup:
   - Wait "2" seconds
   - actualName = Read <LastListItem>
   - assert actualName = "20 Tornado"
-
-//--------------------------------------------------
-
-* Given: I am on the heroes page
 
 * When: I create a hero named "Sancho"
   Component: Heroes
@@ -28,9 +25,3 @@ Setup:
   - Wait "2" seconds
   - actualName = Read <LastListItem>
   - assert actualName = "21 Sancho"
-
-//--------------------------------------------------
-
-Cleanup:
-  Component: org.testeditor.fixture.web.WebBrowser
-  - Close browser
