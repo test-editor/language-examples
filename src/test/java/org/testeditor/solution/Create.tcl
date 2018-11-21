@@ -1,16 +1,9 @@
-package org.testeditor.heroes
-
-# Create implements Create
-
+# CreateHero implements CreateHera
 
 * Given: I am on the heroes page
   Component: org.testeditor.fixture.web.WebBrowser
   - Start <Firefox>
   - Browse "http://sut:4200/heroes"
-  Component: Heroes
-  - Wait "2" seconds
-  - lastHeroName = Read <LastListItem>
-  - assert lastHeroName = "20 Tornado"
 
 * When: I create a hero named "Sancho"
   Component: Heroes
@@ -25,3 +18,7 @@ package org.testeditor.heroes
   - Wait "2" seconds
   - actualName = Read <LastListItem>
   - assert actualName = "21 Sancho"
+
+  Component: org.testeditor.fixture.web.WebBrowser
+  - Close browser
+  
