@@ -6,7 +6,7 @@
   - Browse "http://sut:4200/heroes"
 
 * When: I create a hero named "Sancho"
-  Component: Heroes
+  Component: org.testeditor.heroes.Heroes
   - Wait "2" seconds until <Add> is found
   - Click <Add>
   - Enter "Sancho" into <Name>
@@ -14,7 +14,7 @@
   - Click <Save>
 
 * Then: The hero should be the last one of the list
-  Component: Heroes
+  Component: org.testeditor.heroes.Heroes
   - Wait "2" seconds
   - actualName = Read <LastListItem>
   - assert actualName = "21 Sancho"
