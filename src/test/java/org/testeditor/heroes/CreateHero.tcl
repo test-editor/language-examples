@@ -1,6 +1,4 @@
-package org.testeditor.heroes
-
-# Create implements Create
+# CreateHero implements CreateHero
 
 Setup:
   Component: org.testeditor.fixture.web.WebBrowser
@@ -16,7 +14,7 @@ Setup:
 * Given: I am on the heroes page
 
 * When: I create a hero named "Sancho"
-  Component: Heroes
+  Component: org.testeditor.heroes.Heroes
   - Wait "2" seconds until <Add> is found
   - Click <Add>
   - Enter "Sancho" into <Name>
@@ -24,7 +22,7 @@ Setup:
   - Click <Save>
 
 * Then: The hero should be the last one of the list
-  Component: Heroes
+  Component: org.testeditor.heroes.Heroes
   - Wait "2" seconds
   - actualName = Read <LastListItem>
   - assert actualName = "21 Sancho"
