@@ -1,5 +1,3 @@
-package org.testeditor.heroes
-
 import org.testeditor.fixture.web.*
 
 import static org.testeditor.fixture.web.LocatorStrategy.XPATH
