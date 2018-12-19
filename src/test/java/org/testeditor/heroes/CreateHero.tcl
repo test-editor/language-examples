@@ -1,4 +1,4 @@
-# CreateHero implements CreateHero
+implements org.testeditor.heroes.CreateHero
 
 Setup:
   Component: org.testeditor.fixture.web.WebBrowser

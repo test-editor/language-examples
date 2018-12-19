@@ -1,5 +1,3 @@
-# CreateHero
-
 * Given: I am on the heroes page
 
 * When: I create a hero named "Sancho"
