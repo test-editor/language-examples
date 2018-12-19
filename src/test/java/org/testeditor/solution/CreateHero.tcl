@@ -1,4 +1,4 @@
-# CreateHero implements CreateHero
+implements org.testeditor.heroes.CreateHero
 
 * Given: I am on the heroes page
   Component: org.testeditor.fixture.web.WebBrowser
