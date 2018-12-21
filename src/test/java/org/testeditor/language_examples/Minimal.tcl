@@ -9,4 +9,4 @@ import org.testeditor.language_examples.MinimalComponent
 Component: MinimalComponent
 - minimalcallwithoutparameter
 - value = getBoolean
-- assert !value
+- assert value
