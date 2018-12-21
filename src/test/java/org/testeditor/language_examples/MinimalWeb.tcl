@@ -18,4 +18,4 @@ import org.testeditor.fixture.web.*
 	Component: WebBrowser
 	- Wait "5" seconds
 	- Close browser
-// bam
+// bam, bam
