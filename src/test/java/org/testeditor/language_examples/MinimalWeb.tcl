@@ -1,11 +1,5 @@
-package org.testeditor.language_examples
-
-import org.testeditor.fixture.web.*
-
-# MinimalWeb
-
 * Start browser Firefox and navigate to google
-	Component: WebBrowser
+	Component: org.testeditor.fixture.web.WebBrowser
 	- Start <Firefox>
 	- Browse "https://www.google.com"
 
@@ -15,6 +9,6 @@ import org.testeditor.fixture.web.*
     - Submit element <Searchfield>
 
 * Close browser
-	Component: WebBrowser
+	Component: org.testeditor.fixture.web.WebBrowser
 	- Wait "5" seconds
 	- Close browser
