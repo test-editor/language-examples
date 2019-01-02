@@ -1,5 +1,3 @@
-package org.testeditor.language_examples
-
 interaction type minimalCallWithoutParmeter {
 	template = "minimalcallwithoutparameter"
 	method = MinimalFixture.callWithoutParameter()
