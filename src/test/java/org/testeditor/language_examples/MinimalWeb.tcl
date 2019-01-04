@@ -12,4 +12,3 @@
 	Component: org.testeditor.fixture.web.WebBrowser
 	- Wait "5" seconds
 	- Close browser
-// remote
