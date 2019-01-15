@@ -1,0 +1,18 @@
+package org.testeditor.language_examples    
+
+# MinimalMacro
+
+## MyFirstMacro
+
+template = "my first macro call"
+Component: org.testeditor.fixture.web.WebBrowser
+- Start <Firefox>
+
+
+## MySecondMacroCallWithTwoParameter
+
+template = "my second macro call with firstParam" ${firstParam} "and secondParam" ${secondParam} 
+
+Component: org.testeditor.fixture.web.WebBrowser
+- Press key @firstParam
+- Press key @secondParam
