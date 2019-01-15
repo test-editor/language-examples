@@ -10,7 +10,7 @@ Component: org.testeditor.heroes.Heroes
 * Macro verwenden
 Macro: MinimalMacro
 - my first macro call
-- my second macro call with firstParam @firstParam and @secondParam @secondParam 
+- my second macro call with firstParam @firstParam and @secondParam
 
 * Browser schließen
 Component: org.testeditor.fixture.web.WebBrowser
