@@ -14,3 +14,4 @@ component type MinimalComponentType {
 
 component MinimalComponent is MinimalComponentType {
 }
+// and more
