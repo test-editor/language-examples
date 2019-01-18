@@ -3,4 +3,4 @@ Component: MinimalComponent
 - minimalcallwithoutparameter
 - value = getBoolean
 - assert value
-// remote change 4
+// remote change 5
