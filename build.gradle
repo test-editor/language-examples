@@ -16,8 +16,8 @@ repositories {
 
 // Configure the testeditor plugin
 testeditor {
-	languageVersion '2.3.+'
-	xtextVersion '2.15.0'
+	languageVersion '2.3.5'
+	xtextVersion '2.18.0'
 }
 
 sourceCompatibility = '1.10'
