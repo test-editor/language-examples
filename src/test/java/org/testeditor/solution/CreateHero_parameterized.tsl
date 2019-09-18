@@ -1,0 +1,5 @@
+* Given: I am on the heroes page
+
+* When: I create a hero
+
+* Then: That hero should be the last one of the list
