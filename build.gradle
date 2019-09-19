@@ -41,3 +41,11 @@ dependencies {
 // test.doFirst {
 //	environment 'requiredVariable', 'value'
 // }
+
+processResources {
+	from ('src/test/java') {
+		include '**/*.csv'
+		include '**/*.json'
+		include '**/*.yaml'
+	}
+}
